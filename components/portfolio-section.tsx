@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const projects = [
   {
@@ -55,45 +55,41 @@ export function PortfolioSection() {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-              Proyectos que <span className="text-primary">Generan Resultados</span>
+              Mis Proyectos <span className="text-primary">Terminados</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Cada proyecto diseñado para convertir visitantes en clientes
+              Algunos de mis trabajos, adaptados a las necesidades de cada cliente.
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50"
+                className="group relative h-80 md:h-[420px] overflow-hidden rounded-none border-0 py-0 p-0 shadow-none bg-transparent"
               >
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden bg-muted">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <a
-                    href={project.link}
-                    className="absolute top-4 right-4 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110"
-                  >
-                    <ExternalLink size={18} />
-                  </a>
-                </div>
+                {/* Background Image */}
+                <img
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Dim/gradient overlay */}
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
 
-                {/* Project Content */}
-                <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-balance">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed text-balance">{project.description}</p>
-
-                  {/* Tags */}
+                {/* Text overlay */}
+                <div className="absolute inset-x-6 bottom-6 space-y-3 text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold text-balance">{project.title}</h3>
+                  <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-xl text-balance">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="text-xs">
+                      <Badge
+                        key={tagIndex}
+                        variant="secondary"
+                        className="text-xs bg-white/10 text-white border-white/20"
+                      >
                         {tag}
                       </Badge>
                     ))}
@@ -102,6 +98,7 @@ export function PortfolioSection() {
               </Card>
             ))}
           </div>
+          
         </div>
       </div>
     </section>

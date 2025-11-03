@@ -1,9 +1,15 @@
 "use client"
 
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Github, Linkedin, MessageCircle, Instagram } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
+
+  const whatsappNumber = "+5493515501620" // Reemplaza con tu número de WhatsApp
+  const whatsappMessage = encodeURIComponent(
+    "¡Hola! Me interesa desarrollar una web para mi negocio...",
+  )
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12">
@@ -12,9 +18,15 @@ export function Footer() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div className="space-y-4">
-              <div className="text-2xl font-bold">{"<Dev/>"}</div>
+              <div className="text-2xl font-bold">
+                <span className="text-primary">&lt;&nbsp;</span>
+                <span className="text-white transition-colors">
+                  Franco Juri
+                </span>
+                <span className="text-primary">&nbsp;/&gt;</span>
+              </div>
               <p className="text-secondary-foreground/80 text-sm leading-relaxed">
-                Desarrollo web y aplicaciones que convierten. Full-stack developer comprometido con tu éxito.
+                Desarrollo web y aplicaciones a medida. Hace 4 años creando soluciones a medida.
               </p>
             </div>
 
@@ -28,7 +40,7 @@ export function Footer() {
                       const element = document.getElementById("proceso")
                       if (element) element.scrollIntoView({ behavior: "smooth" })
                     }}
-                    className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                    className="text-secondary-foreground/80 hover:text-primary transition-colors cursor-pointer"
                   >
                     Proceso
                   </button>
@@ -39,7 +51,7 @@ export function Footer() {
                       const element = document.getElementById("portafolio")
                       if (element) element.scrollIntoView({ behavior: "smooth" })
                     }}
-                    className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                    className="text-secondary-foreground/80 hover:text-primary transition-colors cursor-pointer"
                   >
                     Portafolio
                   </button>
@@ -50,7 +62,7 @@ export function Footer() {
                       const element = document.getElementById("contacto")
                       if (element) element.scrollIntoView({ behavior: "smooth" })
                     }}
-                    className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                    className="text-secondary-foreground/80 hover:text-primary transition-colors cursor-pointer"
                   >
                     Contacto
                   </button>
@@ -63,15 +75,7 @@ export function Footer() {
               <h3 className="font-semibold text-lg">Sígueme</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-secondary-foreground/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group"
-                >
-                  <Github className="text-secondary-foreground group-hover:text-primary-foreground" size={20} />
-                </a>
-                <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/francojuri/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-secondary-foreground/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group"
@@ -79,12 +83,20 @@ export function Footer() {
                   <Linkedin className="text-secondary-foreground group-hover:text-primary-foreground" size={20} />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.instagram.com/francojuri.web/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-secondary-foreground/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group"
                 >
-                  <Twitter className="text-secondary-foreground group-hover:text-primary-foreground" size={20} />
+                  <Instagram className="text-secondary-foreground group-hover:text-primary-foreground" size={20} />
+                </a>
+                <a
+                  href="https://github.com/FrancoJuri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-secondary-foreground/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors group"
+                >
+                  <Github className="text-secondary-foreground group-hover:text-primary-foreground" size={20} />
                 </a>
               </div>
             </div>
@@ -93,14 +105,14 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-secondary-foreground/10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/60">
-              <p>© {currentYear} Dev. Todos los derechos reservados.</p>
-              <div className="flex gap-6">
-                <a href="#" className="hover:text-primary transition-colors">
-                  Privacidad
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Términos
-                </a>
+              <p>© {currentYear} Franco Juri. Todos los derechos reservados.</p>
+              <div>
+                <Button
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank")}
+                >
+                  <MessageCircle className="mr-0" size={20} />Hablemos
+                </Button>
               </div>
             </div>
           </div>

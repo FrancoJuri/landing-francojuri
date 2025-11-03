@@ -48,7 +48,7 @@ export function HeroSection() {
                 className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass border-2 border-primary/30 text-primary text-sm font-semibold ${mounted ? "animate-scale-in" : "opacity-0"}`}
               >
                 <Sparkles size={18} className="animate-spin" style={{ animationDuration: "3s" }} />
-                <span>Garantía hasta tu primera venta</span>
+                <span>Tu primer cliente por internet, en solo 21 días</span>
               </div>
 
               {/* Main headline with gradient */}
@@ -64,8 +64,7 @@ export function HeroSection() {
               <p
                 className={`text-xl md:text-2xl text-muted-foreground leading-relaxed ${mounted ? "animate-slide-in-left delay-200" : "opacity-0"}`}
               >
-                Desarrollo <span className="text-primary font-bold">webs y aplicaciones</span> que convierten visitantes
-                en clientes reales.
+                Desarrollo tu <span className="text-primary font-bold">web</span> para que en <span className="text-primary font-bold">21 días</span> empieces a atraer clientes reales por internet.
               </p>
 
               {/* CTA Buttons */}
@@ -101,7 +100,7 @@ export function HeroSection() {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium">
                   <Rocket size={16} className="text-primary" />
-                  <span>Entrega Rápida</span>
+                  <span>Entrega en 21 días</span>
                 </div>
               </div>
             </div>
@@ -126,7 +125,7 @@ export function HeroSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-3xl font-bold text-foreground mb-2">Desarrollo Completo</div>
-                      <div className="text-muted-foreground">Web • Mobile • Sistemas</div>
+                      <div className="text-muted-foreground">Web • Mobile • PC</div>
                     </div>
                     <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center">
                       <Rocket className="text-primary" size={32} />
@@ -137,7 +136,7 @@ export function HeroSection() {
 
               {/* Floating badge */}
               <div className="absolute -top-6 -right-6 glass rounded-2xl px-6 py-4 shadow-xl animate-float">
-                <div className="text-2xl font-bold text-primary">+50</div>
+                <div className="text-2xl font-bold text-primary">+20</div>
                 <div className="text-xs text-muted-foreground">Proyectos</div>
               </div>
             </div>

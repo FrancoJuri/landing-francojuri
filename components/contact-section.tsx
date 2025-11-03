@@ -5,9 +5,9 @@ import { Card } from "@/components/ui/card"
 import { MessageCircle, Mail, Calendar } from "lucide-react"
 
 export function ContactSection() {
-  const whatsappNumber = "1234567890" // Reemplaza con tu número de WhatsApp
+  const whatsappNumber = "+5493515501620" // Reemplaza con tu número de WhatsApp
   const whatsappMessage = encodeURIComponent(
-    "¡Hola! Me interesa desarrollar una web para mi negocio. ¿Podemos conversar?",
+    "¡Hola! Me interesa desarrollar una web para mi negocio...",
   )
 
   return (
@@ -17,7 +17,7 @@ export function ContactSection() {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-              ¿Listo para <span className="text-primary">Empezar a Vender?</span>
+              ¿Listo para vender <span className="text-primary">con tu web?</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Conversemos sobre tu proyecto. Sin compromiso, sin costos ocultos.
@@ -35,7 +35,7 @@ export function ContactSection() {
                 <div className="space-y-3">
                   <h3 className="text-2xl font-bold">Hablemos por WhatsApp</h3>
                   <p className="text-muted-foreground text-balance">
-                    Respondo en menos de 24 horas. Cuéntame sobre tu negocio y cómo puedo ayudarte.
+                    Respondo en minutos. Cuéntame sobre tu negocio y cómo puedo ayudarte.
                   </p>
                 </div>
                 <Button
@@ -67,7 +67,7 @@ export function ContactSection() {
                     </div>
                     <div className="space-y-1">
                       <h4 className="font-semibold">Email</h4>
-                      <p className="text-sm text-muted-foreground">tu@email.com</p>
+                      <p className="text-sm text-muted-foreground">hola@francojuri.com</p>
                     </div>
                   </div>
                 </Card>
@@ -79,7 +79,7 @@ export function ContactSection() {
                     </div>
                     <div className="space-y-1">
                       <h4 className="font-semibold">Agendar Llamada</h4>
-                      <p className="text-sm text-muted-foreground">Disponible Lun-Vie</p>
+                      <p className="text-sm text-muted-foreground">Disponible Lunes-Sabado</p>
                     </div>
                   </div>
                 </Card>
@@ -89,12 +89,12 @@ export function ContactSection() {
               <div className="pt-6 border-t border-border">
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div className="space-y-1">
-                    <div className="text-2xl font-bold text-primary">{"<24h"}</div>
+                    <div className="text-2xl font-bold text-primary">{"<12hs"}</div>
                     <div className="text-xs text-muted-foreground">Tiempo de Respuesta</div>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-2xl font-bold text-primary">100%</div>
-                    <div className="text-xs text-muted-foreground">Garantía</div>
+                    <div className="text-2xl font-bold text-primary">21 dias</div>
+                    <div className="text-xs text-muted-foreground">para vender con tu web</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-2xl font-bold text-primary">Gratis</div>

@@ -10,7 +10,7 @@ const steps = [
     number: "01",
     title: "Llamada de Descubrimiento",
     description:
-      "Conversamos sobre tu negocio, objetivos y visión. Entiendo exactamente qué necesitas para vender más.",
+      "Conversamos sobre tu negocio, objetivos y visión. Entiendo exactamente qué necesitas para vender con tu sitio web.",
     features: ["Análisis de mercado", "Definición de objetivos", "Propuesta personalizada"],
   },
   {
@@ -25,7 +25,7 @@ const steps = [
     icon: TrendingUp,
     number: "03",
     title: "Estrategia Publicitaria",
-    description: "Planeamos juntos cómo atraer clientes. Te acompaño hasta conseguir tu primera venta garantizada.",
+    description: "Planeamos juntos cómo atraer clientes. Te acompaño hasta conseguir tus primeras consultas a traves de tu web.",
     features: ["Plan de marketing", "Análisis de métricas", "Soporte continuo"],
   },
 ]
@@ -90,7 +90,7 @@ export function ProcessSection() {
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Tres pasos para transformar tu negocio y empezar a vender online
+              Tres pasos para transformar tu negocio y empezar a vender con tu web
             </p>
           </div>
 
@@ -150,11 +150,11 @@ export function ProcessSection() {
           </div>
 
           <div className="mt-24 text-center">
-            <div className="inline-block glass rounded-3xl px-10 py-6 shadow-xl border-2 border-primary/20 hover-lift">
+            <div className="inline-block glass rounded-3xl px-10 py-6 shadow-xl border-2 border-primary/20">
               <div className="flex items-center gap-4">
                 <div className="w-4 h-4 bg-primary rounded-full animate-pulse" />
                 <span className="text-lg font-bold text-foreground">
-                  Garantía: Trabajo contigo hasta tu primera venta
+                  Garantía: trabajo contigo hasta conseguir tus primeros clientes
                 </span>
                 <div className="w-4 h-4 bg-primary rounded-full animate-pulse" />
               </div>
