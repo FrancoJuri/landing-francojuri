@@ -19,7 +19,7 @@ const steps = [
     title: "Desarrollo de tu Web",
     description:
       "Creo tu web o aplicación con las últimas tecnologías. Diseño moderno, rápido y optimizado para conversiones.",
-    features: ["Diseño responsive", "Optimización SEO", "Integración de pagos"],
+    features: ["Diseño responsive", "Optimización SEO", "Adaptado a cada negocio"],
   },
   {
     icon: TrendingUp,
@@ -63,12 +63,7 @@ export function ProcessSection() {
   }, [])
 
   return (
-    <section id="proceso" className="py-20 md:py-32 relative overflow-hidden" ref={sectionRef}>
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-orange-50/30 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,107,53,0.1),transparent_50%)]" />
-      </div>
-
+    <section id="proceso" className="py-20 md:py-32 relative overflow-hidden bg-muted/10" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-6 mb-20">

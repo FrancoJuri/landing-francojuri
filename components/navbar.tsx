@@ -4,6 +4,13 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
+
+const whatsappNumber = "+5493515501620" // Reemplaza con tu número de WhatsApp
+const whatsappMessage = encodeURIComponent(
+  "¡Hola! Me interesa desarrollar una web para mi negocio...",
+)
+
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -60,17 +67,24 @@ export function Navbar() {
               Portafolio
             </button>
             <button
+              onClick={() => scrollToSection("sobre-mi")}
+              className="text-foreground/80 hover:text-primary transition-colors font-medium cursor-pointer"
+            >
+              Sobre Mí
+            </button>
+            <button
               onClick={() => scrollToSection("contacto")}
               className="text-foreground/80 hover:text-primary transition-colors font-medium cursor-pointer cursor-pointer"
             >
               Contacto
             </button>
-            <Button
-              onClick={() => scrollToSection("contacto")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Comenzar Ahora
-            </Button>
+            <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Comenzar Ahora
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,17 +109,24 @@ export function Navbar() {
               Portafolio
             </button>
             <button
+              onClick={() => scrollToSection("sobre-mi")}
+              className="block w-full text-left text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+            >
+              Sobre Mí
+            </button>
+            <button
               onClick={() => scrollToSection("contacto")}
               className="block w-full text-left text-foreground/80 hover:text-primary transition-colors font-medium py-2"
             >
               Contacto
             </button>
-            <Button
-              onClick={() => scrollToSection("contacto")}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Comenzar Ahora
-            </Button>
+            <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Comenzar Ahora
+              </Button>
+            </a>
           </div>
         )}
       </div>

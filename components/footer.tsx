@@ -3,13 +3,13 @@
 import { Github, Linkedin, MessageCircle, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const whatsappNumber = "+5493515501620";
+const whatsappMessage = encodeURIComponent(
+  "¡Hola! Me interesa desarrollar una web para mi negocio...",
+)
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const whatsappNumber = "+5493515501620" // Reemplaza con tu número de WhatsApp
-  const whatsappMessage = encodeURIComponent(
-    "¡Hola! Me interesa desarrollar una web para mi negocio...",
-  )
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12">
@@ -107,12 +107,13 @@ export function Footer() {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/60">
               <p>© {currentYear} Franco Juri. Todos los derechos reservados.</p>
               <div>
-                <Button
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank")}
-                >
-                  <MessageCircle className="mr-0" size={20} />Hablemos
-                </Button>
+                <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  >
+                    <MessageCircle className="mr-0" size={20} />Hablemos
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

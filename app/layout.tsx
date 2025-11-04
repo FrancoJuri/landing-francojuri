@@ -7,10 +7,12 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Desarrollo Web que Vende | Tu Negocio Online",
+  title: "Franco Juri - Vende con tu Web",
   description:
-    "Creamos webs y aplicaciones que convierten visitantes en clientes. Trabajamos contigo hasta conseguir tu primera venta.",
-  generator: "v0.app",
+    "Creo webs y aplicaciones que venden. Obtené tus primeros clientes online en solo 21 días.",
+  icons: {
+    icon: "/favicon32.png",
+  }
 }
 
 export default function RootLayout({

@@ -1,51 +1,57 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { MessageCircle } from "lucide-react"
 
 const projects = [
   {
-    title: "E-commerce de Moda",
-    description: "Tienda online completa con pasarela de pagos y gestión de inventario",
-    image: "/modern-fashion-ecommerce.png",
-    tags: ["Next.js", "Stripe", "Tailwind"],
+    title: "Palmerus - Periódico Digital de La Palma",
+    description: "Web de noticias para un periódico local de La Palma, España.",
+    image: "/palmerus-es.webp",
+    tags: ["Wordpress", "Elementor", "SEO"],
     link: "#",
   },
   {
-    title: "App de Reservas",
-    description: "Sistema de reservas para restaurante con panel administrativo",
-    image: "/restaurant-booking-app-interface.png",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    title: "DocuLegal - Sistema de IA para abogados",
+    description: "Analizador de documentos legales con IA para abogados.",
+    image: "/legaldoc.webp",
+    tags: ["React", "Node.js", "PostgreSQL", "AI"],
     link: "#",
   },
   {
-    title: "Landing Page SaaS",
-    description: "Página de aterrizaje optimizada para conversión de software B2B",
-    image: "/modern-saas-landing-page.jpg",
-    tags: ["Next.js", "Framer Motion", "SEO"],
+    title: "Fontan Balestra & Asociados - Estudio Jurídico",
+    description: "Diseño web completo para un estudio jurídico",
+    image: "/fontan-balestra.webp",
+    tags: ["React", "UI/UX", "SEO"],
     link: "#",
   },
   {
-    title: "Dashboard Analítico",
-    description: "Panel de control con visualización de datos en tiempo real",
-    image: "/analytics-dashboard.png",
-    tags: ["React", "Chart.js", "API"],
+    title: "Apartamentos La Palma - Alquileres",
+    description: "Web de alquileres de apartamentos en La Palma, España.",
+    image: "/apartamentoslapalma.webp",
+    tags: ["Wordpress", "Elementor", "SEO"],
     link: "#",
   },
   {
-    title: "App Móvil Fitness",
-    description: "Aplicación móvil para seguimiento de entrenamientos y nutrición",
-    image: "/fitness-app-interface.png",
-    tags: ["React Native", "Firebase", "UI/UX"],
+    title: "Emiumi App - Prestamos de Vasos Reutilizables",
+    description: "Sistema de red de prestamo y devolucion de vasos reutilizables",
+    image: "/emiumi-app.webp",
+    tags: ["React", "Firebase", "UI/UX"],
     link: "#",
   },
   {
-    title: "Plataforma Educativa",
-    description: "Sistema de gestión de cursos online con pagos y certificados",
-    image: "/online-learning-platform.png",
-    tags: ["Next.js", "Supabase", "Video"],
+    title: "IAL finanzas - Broker",
+    description: "Web para empresa de inversiones financieras",
+    image: "/ialfinanzas.webp",
+    tags: ["Wordpress", "Elementor", "SEO"],
     link: "#",
   },
 ]
+
+const whatsappNumber = "+5493515501620";
+const whatsappMessage = encodeURIComponent(
+  "¡Hola! Me interesa desarrollar una web para mi negocio...",
+)
 
 export function PortfolioSection() {
   return (
@@ -99,6 +105,21 @@ export function PortfolioSection() {
             ))}
           </div>
           
+          {/* CTA Section */}
+          <div className="mt-14 text-center space-y-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-balance">
+              ¿Querés ver <span className="text-primary">más proyectos?</span>
+            </h3>
+            <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white text-lg px-10 py-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all"
+              >
+                Contáctame por WhatsApp
+                <MessageCircle size={20} />
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { MessageCircle, Mail, Calendar } from "lucide-react"
 
+const whatsappNumber = "+5493515501620";
+const whatsappMessage = encodeURIComponent(
+  "¡Hola! Me interesa desarrollar una web para mi negocio...",
+)
+
 export function ContactSection() {
-  const whatsappNumber = "+5493515501620" // Reemplaza con tu número de WhatsApp
-  const whatsappMessage = encodeURIComponent(
-    "¡Hola! Me interesa desarrollar una web para mi negocio...",
-  )
 
   return (
     <section id="contacto" className="py-20 md:py-32 bg-muted/30">
@@ -38,14 +39,15 @@ export function ContactSection() {
                     Respondo en minutos. Cuéntame sobre tu negocio y cómo puedo ayudarte.
                   </p>
                 </div>
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 group"
-                  onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank")}
-                >
-                  <MessageCircle className="mr-2" size={20} />
-                  Contactar por WhatsApp
-                </Button>
+                <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 group"
+                  >
+                    <MessageCircle className="mr-2" size={20} />
+                    Contactar por WhatsApp
+                  </Button>
+                </a>
               </div>
 
               {/* Divider */}
@@ -72,17 +74,19 @@ export function ContactSection() {
                   </div>
                 </Card>
 
-                <Card className="p-6 bg-muted/50 border hover:border-primary/50 transition-colors">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Calendar className="text-primary" size={24} />
+                <a href="https://cal.com/francojuri/llamada-de-descubrimiento" target="_blank" rel="noopener noreferrer">
+                  <Card className="p-6 bg-muted/50 border hover:border-primary/50 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Calendar className="text-primary" size={24} />
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="font-semibold">Agendar Llamada</h4>
+                        <p className="text-sm text-muted-foreground">Disponible Lunes-Sabado</p>
+                      </div>
                     </div>
-                    <div className="space-y-1">
-                      <h4 className="font-semibold">Agendar Llamada</h4>
-                      <p className="text-sm text-muted-foreground">Disponible Lunes-Sabado</p>
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
+                </a>
               </div>
 
               {/* Trust Indicators */}
