@@ -106,7 +106,7 @@ export function HeroSection() {
             </div>
 
             {/* Right content - Stats cards */}
-            <div className={`relative ${mounted ? "animate-slide-in-right delay-200" : "opacity-0"}`}>
+            <div className={`relative hidden sm:block ${mounted ? "animate-slide-in-right delay-200" : "opacity-0"}`}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {/* Card 1 - Shows +20 Projects on mobile, 100% Guarantee on desktop */}
                 <div className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover-lift">
